@@ -48,6 +48,7 @@ const ssg = function() {
     const PAGE_SYMBOL = '.ssg-page';
     const L_CHILD_SYMBOL = '.ssg-child-left';
     const R_CHILD_SYMBOL = '.ssg-child-right';
+    const M_CHILD_SYMBOL = '.ssg-child-middle';
     
     const TOUCH_SENSITIVITY = 50;
     const SCROLL_SENSITIVITY = 8;
@@ -117,6 +118,7 @@ const ssg = function() {
         removeTransition();
         scrollTo(pageNum);
         if ( revealed === 'left' ) revealLeft();
+        else if ( revealed === 'middle' ) revealMiddle();
         else if ( revealed === 'right' ) revealRight();
         applyTransition();
     }
@@ -235,6 +237,22 @@ const ssg = function() {
 
         pages[current].style.transform = `translateX(-${100 * unit.vw()}px)`;
         revealed = 'right';
+        lock = true;
+    };
+
+    const revealMiddle = function() { 
+        if (revealed == 'middle') {
+            console.warn('ssg warning: reveal middle called, but middle is already revealed');
+            return;
+        }
+
+        if (!hasChild('middle')) {
+            console.error(`ssg error: page ${current} has no middle child to reveal`);
+            return;
+        }
+
+        pages[current].style.transform = `translateX(-${100 * unit.vw()}px)`;
+        revealed = 'middle';
         lock = true;
     };
 
@@ -434,6 +452,7 @@ const ssg = function() {
         scrollUp: scrollUp,
         scrollTo: scrollTo,
         revealRight: revealRight,
+        revealMiddle: revealMiddle,
         revealLeft: revealLeft,
         conceal: conceal,
 
