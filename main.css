@@ -146,6 +146,10 @@ h6 {
   -webkit-transition: color 0.5s;
 }
 
+.deskripsi-project {
+  text-align: justify;
+}
+
 .nama-project:hover {
   text-decoration: none;
   color: rgb(125, 125, 125);
