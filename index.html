@@ -16,7 +16,15 @@
   <script src="template/ssg.js"></script>
 	<link rel="stylesheet" href="main.css">
 	<style>
-
+		.no-decor {
+			text-decoration: none;
+			color: #000;
+		}
+		.no-decor:hover {
+			text-decoration: none;
+			color: #FFE640;
+			transition: .3s;
+		}
 	</style>
 </head>
 <body>
@@ -35,7 +43,8 @@
 								<p class="body-1 mt-auto p-2 bd-highlight">Scroll down</p>
 							</div>
 							<div class="col">
-								<img src="img/features-3.png" alt="illustration" style="width:430px;">
+								<!-- style="width:570px;" -->
+								<img src="img/foto-1.png" alt="illustration" class="img-fluid">
 							</div>
 						</div>
 					</div>
@@ -46,13 +55,14 @@
 			<div class="outer">
 				<div class="middle">
 					<div class="inner">
-						<div class="mx-auto mb-5" style="width:200px;">
+						<div class="mx-auto mb-3" style="width:200px;">
 							<h2 class="d-flex justify-content-center mb-0">About Me</h2>
 							<p class="body-1 d-flex justify-content-center">My Introduction</p>
 						</div>
 						<div class="row pt-3">
 							<div class="col">
-								<img src="img/features-3.png" alt="illustration" style="width:300px; float: right;" class="">
+								<!-- style="width:490px;" -->
+								<img src="img/foto-2.png" alt="illustration" class="float-right img-fluid">
 							</div>
 							<div class="col">
 								<p class="sub-head-3 mb-0 mt-3">Hi!</p>
@@ -76,14 +86,14 @@
 						</div>
 						<div class="row pt-3">
 							<div class="col">
-								<p class="sub-head-3 d-flex justify-content-center">Web Development</p>
-								<a href="web.html">
+								<p class="sub-head-3 d-flex justify-content-center">UI / UX Design</p>
+								<a href="design.html">
 									<img src="img/features-3.png" alt="illustration" style="width:300px;" class="d-block mx-auto">
 								</a>
 							</div>
 							<div class="col">
-								<p class="sub-head-3 d-flex justify-content-center">UI / UX Design</p>
-								<a href="design.html">
+								<p class="sub-head-3 d-flex justify-content-center">Web Development</p>
+								<a href="web.html">
 									<img src="img/features-3.png" alt="illustration" style="width:300px;" class="d-block mx-auto">
 								</a>
 							</div>
@@ -114,7 +124,9 @@
 											<i class="fa-brands fa-whatsapp" style="height: 30px;"></i>
 										</td>
 										<td>
-											<p class="sub-head-4">0895414550084</p>
+											<a href="https://api.whatsapp.com/send/?phone=%2B62895414550084&text&type=phone_number&app_absent=0" target="_blank" class="no-decor">
+												<p class="sub-head-4">0895414550084</p>
+											</a>
 										</td>
 									</tr>
 									<tr class="contact-list">
@@ -122,7 +134,9 @@
 											<i class="fa-solid fa-envelope" style="height: 26px;"></i>
 										</td>
 										<td>
-											<p class="sub-head-4">shaladinrangga@gmail.com</p>
+											<a href = "mailto: shaladinrangga@gmail.com" target="_blank" class="no-decor">
+												<p class="sub-head-4">shaladinrangga@gmail.com</p>
+											</a>
 										</td>
 									</tr>
 									<tr class="contact-list">
@@ -130,7 +144,9 @@
 											<i class="fa-brands fa-linkedin" style="height: 28px;"></i>
 										</td>
 										<td>
-											<p class="sub-head-4">Moch. Shaladin Rangga Setyo</p>
+											<a href="https://www.linkedin.com/in/moch-shaladin-rangga-s/" target="_blank" class="no-decor">
+												<p class="sub-head-4">Moch. Shaladin Rangga Setyo</p>
+											</a>
 										</td>
 									</tr>
 									<tr class="contact-list">
@@ -138,7 +154,9 @@
 											<i class="fa-brands fa-instagram" style="height: 28px;"></i>
 										</td>
 										<td>
-											<p class="sub-head-4">shaladinrangga</p>
+											<a href="https://www.instagram.com/shaladinrangga/" target="_blank" class="no-decor">
+												<p class="sub-head-4">shaladinrangga</p>
+											</a>
 										</td>
 									</tr>
 								</tbody>

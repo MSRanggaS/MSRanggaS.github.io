@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<script src="https://kit.fontawesome.com/f74dca3203.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Yantramanav:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<title>UI/UX Design - Protego</title>
+	<link rel="stylesheet" href="../main.css">
+	<style type="text/css">
+		/* .container{
+				margin: 0 auto;
+				width: 90%;
+		} */
+		.main_view{
+				width: 41.3rem;
+				height: 31rem;
+		}
+		.main_view img{
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+		}
+		.side_view{
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+		}
+		.side_view img{
+			width: 8rem;
+			height: 5rem;
+			object-fit: cover;
+			cursor: pointer;
+			margin: 1rem;
+		}
+		a.button {
+			-webkit-appearance: button;
+			-moz-appearance: button;
+			appearance: button;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-sm">
+		<div class="main_view mx-auto mt-5">
+				<img src="../img/protego/mockup.png" id="main" alt="IMAGE" class="shadow rounded">
+		</div>
+		<div class="side_view mt-4">
+			<img src="../img/protego/mockup.png" class="shadow rounded" onclick="change(this.src)">
+			<img src="../img/protego/display-1.png" class="shadow rounded" onclick="change(this.src)">
+			<img src="../img/protego/display-2.png" class="shadow rounded" onclick="change(this.src)">
+			<img src="../img/protego/display-3.png" class="shadow rounded" onclick="change(this.src)">
+		</div>
+		<div class="row my-5">
+			<div class="col-xxl-9 mx-auto">
+				<p class="sub-head-4 mb-2">Protego</p>
+				<p class="body-1">Protego is an android-based mobile application that functions as data security when sending sensitive 
+					information to prevent data leakage. Some of the features contained in it are the provision of watermarks, steganography, 
+					and a password manager. This application is made using Android Studio and in Java language. This product uses a blue color 
+					combination because it is synonymous with loyalty and security. For the finished APK file, please access this link. 
+					<a href="https://drive.google.com/file/d/1Bn26H_IlRKSYqGQQn49kIcKqwx8qaeVJ/view?usp=sharing" target="_blank" class="link-porto">Protego APK</a></p>
+			</div>
+		</div>
+		<div class="d-flex justify-content-center mb-5">
+			<a href="../design.html" class="button btn btn-primary btn-lg">Back</a>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const change = src => {
+				document.getElementById('main').src = src
+		}
+	</script>
+
+	<script>
+		var magnifying_area =  document.getElementById("magnifying_area");
+		var magnifying_img =  document.getElementById("magnifying_img");
+
+		magnifying_area.addEventListener("mousemove",function(event){
+			clientX = event.clientX - magnifying_area.offsetLeft
+			clientY = event.clientY - magnifying_area.offsetTop
+			
+			var mWidth = magnifying_area.offsetWidth
+			var mHeight = magnifying_area.offsetHeight
+			clientX = clientX / mWidth * 100
+			clientY = clientY / mHeight * 100
+
+			//magnifying_img.style.transform = 'translate(-50%,-50%) scale(2)'
+			magnifying_img.style.transform = 'translate(-'+clientX+'%, -'+clientY+'%) scale(2)'
+		})
+
+		magnifying_area.addEventListener("mouseleave",function(){
+			magnifying_img.style.transform = 'translate(-50%,-50%) scale(1)'
+		})
+	</script>
+	
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>
