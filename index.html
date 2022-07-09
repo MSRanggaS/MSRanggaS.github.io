@@ -25,6 +25,29 @@
 			color: #FFE640;
 			transition: .3s;
 		}
+		.foto-profil {
+			max-width: 100%;
+			height: auto;
+		}
+		.item_text{
+			animation: key1 .3s ease infinite alternate;
+		}
+		@keyframes key1{
+			0% {transform: translateY(0px);}
+			100% {transform: translateY(-10px);}
+		}
+
+		.hover-main a img {
+			-webkit-transform: scale(1);
+			transform: scale(1);
+			-webkit-transition: .3s ease-in-out;
+			transition: .3s ease-in-out;
+		}
+		.hover-main a:hover img {
+			-webkit-transform: scale(0.9);
+			transform: scale(0.9);
+		}
+
 	</style>
 </head>
 <body>
@@ -34,17 +57,16 @@
 				<div class="middle">
 					<div class="inner">
 						<div class="row">
-							<div class="col d-flex flex-column bd-highlight">
+							<div class="col-lg-6 d-flex flex-column bd-highlight">
 								<div class="p-2 bd-highlight mt-3">
 									<p class="sub-head-4 mb-0">Hello, my name is</p>
 									<h2>Moch. Shaladin Rangga S</h2>
 									<p class="sub-head-4 mt-3">Graphic Designer, Motion Graphic Designer, and Web Design & Developer</p>
 								</div>
-								<p class="body-1 mt-auto p-2 bd-highlight">Scroll down</p>
+								<p class="body-1 mt-auto p-2 bd-highlight item_text">Scroll down</p>
 							</div>
-							<div class="col">
-								<!-- style="width:570px;" -->
-								<img src="img/foto-1.png" alt="illustration" class="img-fluid">
+							<div class="col-lg-6">
+								<img src="img/foto-1.png" alt="illustration" class="foto-profil" width="570px">
 							</div>
 						</div>
 					</div>
@@ -60,12 +82,11 @@
 							<p class="body-1 d-flex justify-content-center">My Introduction</p>
 						</div>
 						<div class="row pt-3">
-							<div class="col">
-								<!-- style="width:490px;" -->
-								<img src="img/foto-2.png" alt="illustration" class="float-right img-fluid">
+							<div class="col-lg-6">
+								<img src="img/foto-2.png" alt="foto" class="float-right foto-profil" width="490">
 							</div>
-							<div class="col">
-								<p class="sub-head-3 mb-0 mt-3">Hi!</p>
+							<div class="col-lg-6">
+								<p class="sub-head-3 mb-0 mt-5">Hi!</p>
 								<p class="body-1">Call me Rangga. Information Technology student at Sepuluh Nopember Institute of Technology who is 
 									experienced in the field of software engineering both web and android based. Has participated in several web development 
 									projects that are part of the UI/UX Design and Frontend Development teams. Experienced in media such as Graphic Design, 
@@ -85,22 +106,22 @@
 							<p class="body-1 d-flex justify-content-center">My Previous Projects</p>
 						</div>
 						<div class="row pt-3">
-							<div class="col">
+							<div class="col-lg-4 hover-main">
 								<p class="sub-head-3 d-flex justify-content-center">UI / UX Design</p>
 								<a href="design.html">
-									<img src="img/features-3.png" alt="illustration" style="width:300px;" class="d-block mx-auto">
+									<img src="img/desain.png" alt="illustration" style="width:300px;" class="d-block mx-auto">
 								</a>
 							</div>
-							<div class="col">
+							<div class="col-lg-4 hover-main">
 								<p class="sub-head-3 d-flex justify-content-center">Web Development</p>
 								<a href="web.html">
-									<img src="img/features-3.png" alt="illustration" style="width:300px;" class="d-block mx-auto">
+									<img src="img/web.png" alt="illustration" style="width:300px;" class="d-block mx-auto">
 								</a>
 							</div>
-							<div class="col">
+							<div class="col-lg-4 hover-main">
 								<p class="sub-head-3 d-flex justify-content-center">Motion Graphic</p>
 								<a href="motion.html">
-									<img src="img/features-3.png" alt="illustration" style="width:300px;" class="d-block mx-auto">
+									<img src="img/motion.png" alt="illustration" style="width:300px;" class="d-block mx-auto">
 								</a>
 							</div>
 						</div>
